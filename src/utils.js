@@ -4,3 +4,8 @@ export function speak(text) {
   utterance.lang = 'ru-RU';
   synth.speak(utterance);
 }
+
+export function setLanguage(recognition, lang) {
+  recognition.lang = lang;
+  speak(`Язык изменён на ${lang === 'en-US' ? 'английский' : 'русский'}.`);
+}
